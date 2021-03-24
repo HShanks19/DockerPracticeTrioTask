@@ -17,7 +17,7 @@ pipeline{
                 
             stage('Deploy'){
                 steps{
-                    sh "cd ~/trio-task && docker-compose pull && docker-compose up -d"
+                    sh "docker compose up -d"
                 }
             }
         }
