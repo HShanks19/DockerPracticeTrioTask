@@ -3,13 +3,14 @@ services:
   mysql:
     container_name: mysql
     build: ./db
-    image: trio-task-mysql
+    image: hollyshanks/trio-task-mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: flask-db
   flask-app:
     container_name: flask-app
     build: ./flask-app
+    image: hollyshanks/trio-task-flask-app
     ports:
     - target: 5000
       published: 5000
