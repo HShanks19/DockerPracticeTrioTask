@@ -8,8 +8,6 @@ pipeline{
             }
             stage("Install Docker & Docker Compose"){
                 steps{
-                    sh "sudo apt-get update"
-                    sh "sudo apt install curl -y"
                     sh "curl https://get.docker.com | sudo bash"
                     sh "sudo usermod -aG docker jenkins"
                     sh "sudo curl -L https://github.com/docker/compose/releases/download/1.27.4/docker-compose-\$(uname -s)-\$(uname -m) -o /usr/local/bin/docker-compose"
