@@ -4,11 +4,6 @@ pipeline{
                 DOCKER_PASSWORD = credentials("DOCKER_PASSWORD")
         }
         stages{
-            stage('Clone Trio Task'){
-                steps{
-                    sh "git clone https://github.com/HShanks19/DockerPracticeTrioTask || true"
-                }
-            }
             stage("Install Docker & Docker Compose"){
                 steps{
                     sh "bash docker-install.sh"
