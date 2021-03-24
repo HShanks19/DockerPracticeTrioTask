@@ -6,7 +6,7 @@ curl https://get.docker.com | sudo bash
 
 sudo usermod -aG docker jenkins
 
-newgrp docker
+sudo systemctl restart jenkins
 
 sudo apt install -y curl jq
 
